@@ -23,10 +23,11 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  padding: 0 40px;
+  padding: 0 40px 561px 40px;
+  color: var(--black);
 
   @media(max-width: 800px) {
-    padding: 0;
+    padding: 0 0 115px 0;
   }
 }
 

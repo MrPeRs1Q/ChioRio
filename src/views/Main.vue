@@ -4,19 +4,22 @@
     <Block1/>
   </Page>
   <Page variant="dark" center-block>
-    <p>Почему стоит выбрать нас</p>
+    <Block2/>
   </Page>
   <Page
+      id="about"
       :custom-style="{
         position: 'absolute',
-        top: '-149.8px',
+        top: `${windowSizeForMobile > 800 ? '-149.8px' : '-40.8px'}`,
         left: '0',
       }"
       center-block
   >
     <template #center>
-      <Hieroglyph1/>
+      <Hieroglyph1 v-if="windowSizeForMobile > 800"/>
+      <HieroglyphMobileBlack v-else/>
     </template>
+    <Block3/>
   </Page>
 </template>
 
@@ -26,10 +29,30 @@ import Page from '@/components/Page.vue';
 import Logo from '@/assets/icons/logo/Logo.vue';
 import Hieroglyph1 from '@/assets/icons/hieroglyphics/hieroglyph1/Hieroglyph1.vue';
 import Block1 from '@/components/blocks/Block1.vue';
+import Block2 from '@/components/blocks/Block2.vue';
+import Block3 from '@/components/blocks/Block3.vue';
+import HieroglyphMobileBlack from '@/assets/icons/hieroglyphics/hieroglyph-mobile-black/HieroglyphMobileBlack.vue';
 
 export default {
   name: 'Main',
-  components: {Block1, Hieroglyph1, Logo, Page, VHeader},
+  components: {HieroglyphMobileBlack, Block3, Block2, Block1, Hieroglyph1, Logo, Page, VHeader},
+  data() {
+    return {
+      windowSizeForMobile: document.documentElement.clientWidth,
+    };
+  },
+  mounted() {
+    window.addEventListener("resize", this.isMobileHandler);
+    this.isMobileHandler();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.isMobileHandler);
+  },
+  methods: {
+    isMobileHandler() {
+      this.windowSizeForMobile = document.documentElement.clientWidth;
+    }
+  }
 };
 </script>
 

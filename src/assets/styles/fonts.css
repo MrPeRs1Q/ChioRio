@@ -40,4 +40,32 @@
   }
 }
 
+.card-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 79px;
+  letter-spacing: 0;
+}
+@media (max-width: 800px) {
+  .card-title {
+    font-size: 64px;
+    line-height: 67px;
+  }
+}
+
+.card-text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0;
+}
+@media (max-width: 800px) {
+  .card-text {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+
 /*# sourceMappingURL=fonts.css.map */
