@@ -22,7 +22,7 @@ export default {
   font-size: 24px;
 }
 
-html {
+html, body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;

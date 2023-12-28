@@ -39,8 +39,11 @@ export default {
     max-width: 727px;
 
     @media(max-width: 800px) {
-      width: 100%;
       max-width: 500px;
+    }
+
+    @media(max-width: 450px) {
+      max-width: 335px;
     }
   }
 
