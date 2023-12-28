@@ -1,0 +1,21 @@
+{
+  "name": "chio-rio",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "sas": "^3.0.4",
+    "sass": "^1.69.5",
+    "vite": "^5.0.10"
+  }
+}
