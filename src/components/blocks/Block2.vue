@@ -7,7 +7,7 @@
       <div class="content__right">
         <div v-for="(it, key) in cards" class="content__right__card" :key="key">
           <component :is="it.svg"/>
-          <div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
             <p class="card-title">{{ it.title }}</p>
             <p class="card-text">{{ it.text }}</p>
           </div>
@@ -80,12 +80,13 @@ export default {
 
   &__right {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 35px;
     color: var(--black);
 
     @media(max-width: 800px) {
       max-width: 335px;
+      grid-gap: 20px;
     }
 
     &__card {

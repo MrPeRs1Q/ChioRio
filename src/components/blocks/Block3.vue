@@ -8,12 +8,39 @@
         <p class="text">На пробном уроке преподаватель определит ваш уровень знания языка и поможет подобрать подходящий курс</p>
       </div>
     </div>
+    <div class="content__bottom">
+      <img v-if="windowSizeForMobile >= 1850" src="@/assets/images/block3/block3-default.svg" alt="block3-default">
+      <img v-else src="@/assets/images/block3/block3-mobile.svg" alt="block3-mobile">
+    </div>
+    <div style="text-align: center">
+      <v-button variant="outlined-dark">Записаться</v-button>
+    </div>
   </div>
 </template>
 
 <script>
+import VButton from '@/components/VButton.vue';
+
 export default {
-  name: 'Block3'
+  name: 'Block3',
+  components: {VButton},
+  data() {
+    return {
+      windowSizeForMobile: document.documentElement.clientWidth,
+    };
+  },
+  mounted() {
+    window.addEventListener("resize", this.isMobileHandler);
+    this.isMobileHandler();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.isMobileHandler);
+  },
+  methods: {
+    isMobileHandler() {
+      this.windowSizeForMobile = document.documentElement.clientWidth;
+    }
+  }
 };
 </script>
 
@@ -28,8 +55,9 @@ export default {
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+  grid-column-gap: 166px;
+  grid-row-gap: 50px;
 
   &__left {
     max-width: 967px;
@@ -49,6 +77,12 @@ export default {
     @media(max-width: 800px) {
       max-width: 335px;
     }
+  }
+
+  &__bottom {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
   }
 }
 </style>
