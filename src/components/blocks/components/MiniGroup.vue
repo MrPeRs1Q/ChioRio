@@ -151,6 +151,7 @@ export default {
       }
 
       @media(max-width: 800px) {
+        padding: 20px;
         min-width: 267px;
         height: 205px;
       }

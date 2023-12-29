@@ -88,3 +88,16 @@
     line-height: 14px;
   }
 }
+
+.card-mini-text {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+
+  @media(max-width: 800px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

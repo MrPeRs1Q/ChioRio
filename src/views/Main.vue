@@ -49,6 +49,21 @@
     </template>
     <Block5 id="prices"/>
   </Page>
+  <Page
+      variant="dark"
+      :custom-style="{
+        position: 'absolute',
+        top: `${windowSizeForMobile > 550 ? '-149.8px' : '-40.8px'}`,
+        left: '0',
+      }"
+      center-block
+  >
+    <template #center>
+      <Hieroglyph3 v-if="windowSizeForMobile > 550"/>
+      <HieroglyphMobileWhite v-else/>
+    </template>
+    <Block6 id="comments"/>
+  </Page>
 </template>
 
 <script>
@@ -64,10 +79,14 @@ import HieroglyphMobileBlack from '@/assets/icons/hieroglyphics/hieroglyph-mobil
 import HieroglyphMobileWhite from '@/assets/icons/hieroglyphics/hieroglyph-mobile-white/HieroglyphMobileWhite.vue';
 import Block4 from '@/components/blocks/Block4.vue';
 import Block5 from '@/components/blocks/Block5.vue';
+import Hieroglyph3 from '@/assets/icons/hieroglyphics/hieroglyph3/Hieroglyph3.vue';
+import Block6 from '@/components/blocks/Block6.vue';
 
 export default {
   name: 'Main',
   components: {
+    Block6,
+    Hieroglyph3,
     Block5,
     Block4,
     HieroglyphMobileBlack, HieroglyphMobileWhite, Block3, Block2, Block1, Hieroglyph1, Hieroglyph2, Logo, Page, VHeader},
