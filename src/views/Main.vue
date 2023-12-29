@@ -7,7 +7,6 @@
     <Block2/>
   </Page>
   <Page
-      id="about"
       :custom-style="{
         position: 'absolute',
         top: `${windowSizeForMobile > 550 ? '-149.8px' : '-40.8px'}`,
@@ -19,7 +18,7 @@
       <Hieroglyph1 v-if="windowSizeForMobile > 550"/>
       <HieroglyphMobileBlack v-else/>
     </template>
-    <Block3/>
+    <Block3 id="about"/>
   </Page>
   <Page
       variant="dark"
@@ -48,6 +47,7 @@
       <Hieroglyph1 v-if="windowSizeForMobile > 550"/>
       <HieroglyphMobileBlack v-else/>
     </template>
+    <Block5 id="prices"/>
   </Page>
 </template>
 
@@ -63,10 +63,12 @@ import Block3 from '@/components/blocks/Block3.vue';
 import HieroglyphMobileBlack from '@/assets/icons/hieroglyphics/hieroglyph-mobile-black/HieroglyphMobileBlack.vue';
 import HieroglyphMobileWhite from '@/assets/icons/hieroglyphics/hieroglyph-mobile-white/HieroglyphMobileWhite.vue';
 import Block4 from '@/components/blocks/Block4.vue';
+import Block5 from '@/components/blocks/Block5.vue';
 
 export default {
   name: 'Main',
   components: {
+    Block5,
     Block4,
     HieroglyphMobileBlack, HieroglyphMobileWhite, Block3, Block2, Block1, Hieroglyph1, Hieroglyph2, Logo, Page, VHeader},
   data() {

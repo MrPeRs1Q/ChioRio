@@ -62,3 +62,29 @@
     line-height: 15px;
   }
 }
+
+.tabs-text {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0;
+  
+  @media(max-width: 800px) {
+    font-size: 16px;
+    line-height: 17px;
+  }
+}
+
+.card-price-text {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+
+  @media(max-width: 800px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
