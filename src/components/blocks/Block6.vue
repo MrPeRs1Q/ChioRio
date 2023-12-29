@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <p class="step-title" style="text-align: center; margin-bottom: 40px">Посмотрите, что о нас думают</p>
-    <marquee scrolldelay="5">
+    <Vue3Marquee :clone="true">
       <div class="comments">
-        <div v-for="(it, key) in comments" class="comments__card" :key="key">
+        <div v-for="(it, key) in comments" class="comments__card" style="margin: 0 10px" :key="key">
           <div class="comments__card__header">
             <component :is="it.avatar" />
             <div style="display: flex; flex-direction: column; gap: 5px">
@@ -16,10 +16,11 @@
           </div>
         </div>
       </div>
-    </marquee>
-    <marquee v-if="windowSizeForMobile > 800" direction="right" scrolldelay="5">
+    </Vue3Marquee>
+    <br>
+    <Vue3Marquee v-if="windowSizeForMobile > 800" :clone="true" :direction="'reverse'">
       <div class="comments">
-        <div v-for="(it, key) in comments" class="comments__card" :key="key">
+        <div v-for="(it, key) in comments" class="comments__card" style="margin: 0 10px" :key="key">
           <div class="comments__card__header">
             <component :is="it.avatar" />
             <div style="display: flex; flex-direction: column; gap: 5px">
@@ -32,17 +33,18 @@
           </div>
         </div>
       </div>
-    </marquee>
+    </Vue3Marquee>
   </div>
 </template>
 
 <script>
 import Avatar1 from '@/assets/icons/avatar/Avatar1.vue';
 import Avatar2 from '@/assets/icons/avatar/Avatar2.vue';
+import { Vue3Marquee } from 'vue3-marquee'
 
 export default {
   name: 'Block6',
-  components: {Avatar1, Avatar2},
+  components: {Avatar1, Avatar2, Vue3Marquee},
   data() {
     return {
       windowSizeForMobile: document.documentElement.clientWidth,
@@ -57,34 +59,6 @@ export default {
         {
           id: 2,
           avatar: 'avatar2',
-          name: 'Влада Н.',
-          role: 'Ученица курса китайского с носителем',
-          comment: 'Я занимаюсь с преподавателем Чжан Лаоши (носителем китайского языка) уже 4 месяца и просто в восторге! Преподаватель очень интересно и эффективно выстраивает урок, если непонятно какое-либо слово, то объясняет легко и доступно.'
-        },
-        {
-          id: 3,
-          avatar: 'Avatar1',
-          name: 'Антон В.',
-          role: 'Ученик курсов для поступления в ВУЗ Японии',
-          comment: 'Занимаюсь уже 7 месяц, мне очень нравится школа. Школу нашел случайно в интернете. Решил попробовать и не пожалел. Занимаюсь индивидуально онлайн, очень удобно, т.к. я часто нахожусь в разъездах.'
-        },
-        {
-          id: 4,
-          avatar: 'Avatar2',
-          name: 'Влада Н.',
-          role: 'Ученица курса китайского с носителем',
-          comment: 'Я занимаюсь с преподавателем Чжан Лаоши (носителем китайского языка) уже 4 месяца и просто в восторге! Преподаватель очень интересно и эффективно выстраивает урок, если непонятно какое-либо слово, то объясняет легко и доступно.'
-        },
-        {
-          id: 5,
-          avatar: 'Avatar1',
-          name: 'Антон В.',
-          role: 'Ученик курсов для поступления в ВУЗ Японии',
-          comment: 'Занимаюсь уже 7 месяц, мне очень нравится школа. Школу нашел случайно в интернете. Решил попробовать и не пожалел. Занимаюсь индивидуально онлайн, очень удобно, т.к. я часто нахожусь в разъездах.'
-        },
-        {
-          id: 6,
-          avatar: 'Avatar2',
           name: 'Влада Н.',
           role: 'Ученица курса китайского с носителем',
           comment: 'Я занимаюсь с преподавателем Чжан Лаоши (носителем китайского языка) уже 4 месяца и просто в восторге! Преподаватель очень интересно и эффективно выстраивает урок, если непонятно какое-либо слово, то объясняет легко и доступно.'
@@ -119,7 +93,7 @@ export default {
 
 .comments {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 
   &__card {
     color: var(--black);
