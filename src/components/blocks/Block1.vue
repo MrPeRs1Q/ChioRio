@@ -6,7 +6,7 @@
       </div>
       <div class="content__right">
         <p class="text">Наша образовательная площадка для тех, кто увлечен культурой и традициями азиатских стран. Мы хотим, чтобы у большего количества людей была возможность изучать азиатские языки.</p>
-        <v-button style="margin-top: 20px">Попробовать</v-button>
+        <v-button style="margin-top: 20px; z-index: 11; position: relative">Попробовать</v-button>
       </div>
     </div>
   </div>
