@@ -64,6 +64,9 @@
     </template>
     <Block6 id="comments"/>
   </Page>
+  <Page>
+    <Block7 id="contacts"/>
+  </Page>
 </template>
 
 <script>
@@ -81,10 +84,12 @@ import Block4 from '@/components/blocks/Block4.vue';
 import Block5 from '@/components/blocks/Block5.vue';
 import Hieroglyph3 from '@/assets/icons/hieroglyphics/hieroglyph3/Hieroglyph3.vue';
 import Block6 from '@/components/blocks/Block6.vue';
+import Block7 from '@/components/blocks/Block7.vue';
 
 export default {
   name: 'Main',
   components: {
+    Block7,
     Block6,
     Hieroglyph3,
     Block5,
