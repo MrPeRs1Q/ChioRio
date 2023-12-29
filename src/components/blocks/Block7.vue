@@ -70,7 +70,7 @@
       </div>
       <Hieroglyph4/>
     </div>
-    <v-divider style="margin: 30px 0"/>
+    <v-divider dark style="margin: 30px 0"/>
     <div style="display: flex; justify-content: space-between">
       <p class="footer-text">©️2023 «Chio Rio»</p>
       <p class="footer-text">Made by Artyom Babich</p>

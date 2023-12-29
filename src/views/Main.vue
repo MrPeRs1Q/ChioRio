@@ -1,7 +1,7 @@
 <template>
   <Page>
     <VHeader/>
-    <Block1/>
+    <Block1 id="main"/>
   </Page>
   <Page variant="dark" center-block>
     <Block2/>
