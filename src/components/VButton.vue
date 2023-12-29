@@ -30,6 +30,7 @@ export default {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0;
+  cursor: pointer;
 
   &--filled-dark {
     background: var(--black);

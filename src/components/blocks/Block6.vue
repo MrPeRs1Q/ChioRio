@@ -83,7 +83,7 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  padding: 295px 40px 100px 40px;
+  padding: 295px 0 100px 0;
   color: var(--white);
 
   @media(max-width: 800px) {

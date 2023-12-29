@@ -3,7 +3,18 @@
     <VHeader/>
     <Block1 id="main"/>
   </Page>
-  <Page variant="dark" center-block>
+  <Page
+      :custom-style="{
+        position: 'absolute',
+        top: `${windowSizeForMobile > 550 ? '-725.8px' : '-40.8px'}`,
+        left: '90px',
+      }"
+      variant="dark"
+      center-block
+  >
+    <template #center>
+      <img v-if="windowSizeForMobile > 1700" src="@/assets/images/block2/korea.png" alt="korea">
+    </template>
     <Block2/>
   </Page>
   <Page
