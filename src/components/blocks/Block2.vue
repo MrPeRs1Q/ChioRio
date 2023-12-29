@@ -62,7 +62,7 @@ export default {
 .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  grid-gap: 1em;
+  grid-gap: 50px;
 
   &__left {
     max-width: 727px;

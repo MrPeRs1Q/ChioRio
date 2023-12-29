@@ -7,8 +7,8 @@
       <v-button v-if="windowSizeForMobile > 1670" variant="outlined-dark" style="width: 240px; margin-top: 40px">Оставить заявку</v-button>
     </div>
     <div class="content__right">
-      <img v-if="windowSizeForMobile > 800" src="@/assets/images/block5/individual.svg" alt="mini-group">
-      <img v-else src="@/assets/images/block5/individual-mobile.svg" alt="mini-group">
+      <img v-if="windowSizeForMobile > 800" src="@/assets/images/block5/individual.png" alt="mini-group">
+      <img v-else src="@/assets/images/block5/individual-mobile.png" alt="mini-group">
     </div>
   </div>
   <div class="content__bottom">
