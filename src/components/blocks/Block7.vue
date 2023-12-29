@@ -46,7 +46,7 @@
       </div>
       <div class="container__content">
         <div>
-          <p class="text" style="font-weight: 700">Меню</p>
+          <p class="text" style="font-weight: 700; margin-bottom: 25px">Меню</p>
           <div style="display: flex; flex-direction: column; gap: 10px">
             <a class="footer-text" href="#main">Главная</a>
             <a class="footer-text" href="#about">О нас</a>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div>
-          <p class="text" style="font-weight: 700">Контакты</p>
+          <p class="text" style="font-weight: 700; margin-bottom: 25px">Контакты</p>
           <div style="display: flex; flex-direction: column; gap: 10px">
             <a class="footer-text" href="tel: 8 (777) 777 77-77">8 (777) 777 77-77</a>
             <a class="footer-text" href="mailto: info@chiorio.ru">info@chiorio.ru</a>

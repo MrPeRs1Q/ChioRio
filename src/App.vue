@@ -26,33 +26,6 @@ html, body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-
-  &::-webkit-scrollbar-button {
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0;
-    border-radius: 10px;
-    background-color: var(--black);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    opacity: 0.3;
-  }
-
-  &::-webkit-resizer {
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 0;
-  }
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--white);
-  }
 }
 
 a {

@@ -145,7 +145,7 @@ export default {
     background: var(--white);
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    z-index: 12;
   }
 
   &__container {
