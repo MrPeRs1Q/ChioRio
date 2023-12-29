@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="content__bottom">
-      <img v-if="windowSizeForMobile >= 1850" src="@/assets/images/block3/block3-default.svg" alt="block3-default">
-      <img v-else src="@/assets/images/block3/block3-mobile.svg" alt="block3-mobile">
+      <img v-if="windowSizeForMobile >= 1850" src="@/assets/images/block3/block3-default.png" alt="block3-default">
+      <img v-else src="@/assets/images/block3/block3-mobile.png" alt="block3-mobile">
     </div>
     <div style="text-align: center">
       <v-button variant="outlined-dark">Записаться</v-button>

@@ -12,8 +12,8 @@
         <v-button v-if="windowSizeForMobile > 1500" style="width: 190px" variant="outlined-white">Записаться</v-button>
       </div>
       <div class="content__right">
-        <img v-if="windowSizeForMobile > 850" src="@/assets/images/block4/fudzy.svg" alt="fudzy">
-        <img v-else src="@/assets/images/block4/fudzy-mobile.svg" alt="fudzy-mobile">
+        <img v-if="windowSizeForMobile > 850" src="@/assets/images/block4/fudzy.png" alt="fudzy">
+        <img v-else src="@/assets/images/block4/fudzy-mobile.png" alt="fudzy-mobile">
         <v-button v-if="windowSizeForMobile < 1500" style="width: 190px;" variant="outlined-white">Записаться</v-button>
       </div>
     </div>

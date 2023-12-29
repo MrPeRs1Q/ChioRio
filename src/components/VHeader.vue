@@ -36,7 +36,7 @@
         </div>
         <div class="burger-menu__content__information">
           <div class="burger-menu__content__information__left">
-            <a class="burger-menu__content__information__text" href="tel: 8 (777) 777 77-77">8 (777) 777 77-77</a>
+            <a class="burger-menu__content__information__text" style="white-space: nowrap;" href="tel: 8 (777) 777 77-77">8 (777) 777 77-77</a>
             <a class="burger-menu__content__information__text" href="mailto: info@chiorio.ru">info@chiorio.ru</a>
           </div>
           <div class="burger-menu__content__information__right">
@@ -149,6 +149,9 @@ export default {
   }
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     margin: 0 auto;
   }
 
@@ -158,7 +161,6 @@ export default {
   }
 
   &__content {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -204,7 +206,7 @@ export default {
   }
 
   &__footer {
-    margin-top: 235px;
+    margin-top: 50px;
   }
 }
 </style>
