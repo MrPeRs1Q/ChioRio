@@ -45,11 +45,23 @@ export default {
   &--outlined-dark {
     border: 1px solid var(--black);
     color: var(--black);
+
+    &:hover {
+      background: var(--black);
+      color: var(--white);
+      transition: .3s;
+    }
   }
 
   &--outlined-white {
     border: 1px solid var(--white);
     color: var(--white);
+
+    &:hover {
+      background: var(--white);
+      color: var(--black);
+      transition: .3s;
+    }
   }
 
   @media(max-width: 800px) {
