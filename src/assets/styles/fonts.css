@@ -124,4 +124,18 @@
   }
 }
 
+.form-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 0;
+}
+@media (max-width: 800px) {
+  .form-title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+
 /*# sourceMappingURL=fonts.css.map */

@@ -5,16 +5,22 @@
   </Page>
   <Page
       :custom-style="{
+        maxWidth: '1740px',
+        width: '100%',
         position: 'absolute',
-        top: `${windowSizeForMobile > 550 ? '-725.8px' : '-40.8px'}`,
-        left: '90px',
+        top: `${windowSizeForMobile > 800 ? windowSizeForMobile < 1000 ? '-456.8px' : '-725.8px' : '-112.8px'}`,
+        left: `${windowSizeForMobile > 800 ? '90px' : '10px'}`,
       }"
       variant="dark"
       center-block
   >
-    <template #center>
-      <img v-if="windowSizeForMobile > 1700" src="@/assets/images/block2/korea.png" alt="korea">
+    <template v-if="windowSizeForMobile > 800" #center>
+      <SelectLanguage/>
     </template>
+    <template v-if="windowSizeForMobile < 800" #center>
+      <SelectLanguageMobile/>
+    </template>
+    <img v-if="windowSizeForMobile < 1000" src="@/assets/images/block2/form-mobile.svg" alt="form" style="margin-top: 102px">
     <Block2/>
   </Page>
   <Page
@@ -96,10 +102,14 @@ import Block5 from '@/components/blocks/Block5.vue';
 import Hieroglyph3 from '@/assets/icons/hieroglyphics/hieroglyph3/Hieroglyph3.vue';
 import Block6 from '@/components/blocks/Block6.vue';
 import Block7 from '@/components/blocks/Block7.vue';
+import SelectLanguage from '@/components/SelectLanguage.vue';
+import SelectLanguageMobile from '@/components/SelectLanguageMobile.vue';
 
 export default {
   name: 'Main',
   components: {
+    SelectLanguageMobile,
+    SelectLanguage,
     Block7,
     Block6,
     Hieroglyph3,
