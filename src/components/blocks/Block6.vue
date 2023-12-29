@@ -104,7 +104,6 @@ export default {
     background: var(--white);
     border-radius: 25px;
     padding: 30px;
-    min-width: 600px;
     max-width: 764px;
 
     &__header {
@@ -114,7 +113,7 @@ export default {
 
     @media(max-width: 800px) {
       padding: 20px;
-      min-width: 323px;
+      max-width: 323px;
       height: 273px;
     }
   }
